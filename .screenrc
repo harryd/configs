@@ -1,0 +1,61 @@
+## ~/.screenrc
+#
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+## attrcolor b ".I" 
+# tell screen how to set colors. AB = background, AF=foreground 
+## termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
+# erase background with current bg color 
+## defbce "on" 
+
+startup_message off
+vbell off
+bell_msg '^G'
+activity "active: %n (%t) [%w:%s]"
+msgwait 5 # 1 second messages
+defscrollback 30000
+
+#caption splitonly "%{= B} %{= G}%{R}%%t"
+# always caption current window
+caption always '%{= M} %= %{= w}%-w%{+b r}%n*%t%{-b r}%{w}%+w %= %{= M}'
+
+autodetach on
+deflogin on
+defflow off
+nethack on
+defutf8 on
+altscreen on
+#defbce on
+nonblock on
+defhstatus "screen: ^En (^Et)"
+
+#caption always "%{= KW}%-w%{= gW}%n %t%{-}%+w %-="
+#hardstatus alwayslastline "%{= kw}%-w%{= BW}%n %t%{-}%+w %-="
+
+#caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= | %{= kB}%m/%d %{= kR}%c"
+#hardstatus alwayslastline "%{= kW} %-= %{= kB}Session:%u%{= kW} %5` | %{= kB}Host:%{= kW} %H |%{= kB} MEM:%{= kW} %2`MB /%{= kB} SW: %{= kW}%3`MB | %4` %{= kR}Unread %{= kW}| %m/%d %c"
+
+#caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-=   | %1` | %2`MB/%3`MB | %4` Unread | %m/%d %l:%M %p"
+
+#hardstatus alwayslastline "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= | %{= kB}%m/%d %{= kw}|%{= kB} %c"
+
+
+#bindkey -k k7 detach
+bindkey -k k8 kill
+# space in keyboard
+bindkey -k k; screen
+bindkey -k k9 title
+bindkey -k F1 prev
+bindkey -k F2 next
+
+defscrollback 30000
+screen -t root 0 sudo su 
+screen -t alsamixer 1 alsamixer
+screen -t mpd 2 ncmpcpp
+screen -t anapnea 3  ssh harry@anapnea.net
+screen -t irc 4 irssi
+#screen -t anapnea 4 ssh harry@anapnea.net
+screen -t
+screen -t
+screen -t

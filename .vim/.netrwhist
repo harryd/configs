@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/etc/skel'
+let g:netrw_dirhist_2='/home/harry/Dropbox/configs/.mplayer'
+let g:netrw_dirhist_3='/home/harry/src/xsbs-minimal/src/pyscripts/plugins'
+let g:netrw_dirhist_4='/home/harry/src/xsbs-minimal/src/pyscripts/plugins/installer'
+let g:netrw_dirhist_5='/usr/share/uzbl'
+let g:netrw_dirhist_6='/usr/share/uzbl/examples'
+let g:netrw_dirhist_7='/usr/share/uzbl/examples/config'
+let g:netrw_dirhist_8='/home/harry/test'
