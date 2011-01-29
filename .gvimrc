@@ -1,1 +1,1 @@
-set gfn=Inconsolata\ Medium\ 10
+set gfn=Terminus\ Medium\ 10

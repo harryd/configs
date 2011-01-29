@@ -26,7 +26,7 @@ defflow off
 nethack on
 defutf8 on
 altscreen on
-#defbce on
+defbce on
 nonblock on
 defhstatus "screen: ^En (^Et)"
 
@@ -50,7 +50,7 @@ bindkey -k F1 prev
 bindkey -k F2 next
 
 defscrollback 30000
-screen -t root 0 sudo su 
+screen -t X 0  
 screen -t alsamixer 1 alsamixer
 screen -t mpd 2 ncmpcpp
 screen -t anapnea 3  ssh harry@anapnea.net

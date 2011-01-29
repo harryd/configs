@@ -20,11 +20,11 @@
 !*color15:					#dedede
 *color15:					#fefefe
 
-*font:               	xft:terminus:pixelsize=12	
+*font:               	xft:terminus:pixelsize=12
 
 ! urxvt settings
 urxvt*geometry:         	107x33
-urxvt*saveLines:        	32767
+urxvt*saveLines:        	0
 urxvt*scrollTtyKeypress:	true
 urxvt*scrollTtyOutput: 		false
 urxvt*scrollBar:        	false
@@ -36,14 +36,14 @@ urxvt*termName:         	rxvt-unicode
 urxvt*inheritPixmap:    	true
 urxvt*shading:          	50
 urxvt*tintColor:        	#555555
-urxvt*print-pipe:      		cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
+urxvt*print-pipe:      		"cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)"
 urxvt*secondaryScroll:  	true
 urxvt*mapAlert:         	true
 urxvt*utmpInhibit:      	true
 urxvt.perl-lib:         	/usr/lib/urxvt/perl
 urxvt*perl-ext-common:  	default,matcher,searchable-scrollback
 urxvt*matcher.button:   	1
-urxvt*urlLauncher:      	chromium
+urxvt*urlLauncher:      	chromium-browser
 urxvt.matcher.pattern.1: 	\\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 urxvt*keysym.S-Prior:   	^[[5;2~
 urxvt*keysym.S-Next:    	^[[6;2~
