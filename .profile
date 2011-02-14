@@ -3,4 +3,8 @@ if [ -e /usr/share/terminfo/x/xterm-256color ]; then
 else
         export TERM='xterm-color'
 fi
-export BROWSER='chromium-browser'
+if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]]; then
+	exec startx
+	# Could use xinit instead of startx
+	#exec xinit -- /usr/bin/X -nolisten tcp
+fi

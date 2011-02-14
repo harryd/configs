@@ -54,7 +54,7 @@ screen -t X 0
 screen -t alsamixer 1 alsamixer
 screen -t mpd 2 ncmpcpp
 screen -t anapnea 3  ssh harry@anapnea.net
-screen -t irc 4 irssi
+screen -t irc 4 ssh harry@harry.is 
 #screen -t anapnea 4 ssh harry@anapnea.net
 screen -t
 screen -t
